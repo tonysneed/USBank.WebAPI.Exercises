@@ -11,7 +11,7 @@ namespace KatanaTokenAuth.Client
         static void Main(string[] args)
         {
             // Create http client
-            const string address = "http://localhost:50858/api/";
+            const string address = "http://localhost.fiddler:50858/api/";
            //const string address = "https://web.local/KatanaTokenAuth.RelyingParty-After/api/";
             var client = new HttpClient { BaseAddress = new Uri(address) };
 
