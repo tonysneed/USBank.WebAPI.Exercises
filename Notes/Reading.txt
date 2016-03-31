@@ -1,5 +1,8 @@
 Recommended Reading:
 
 CLR via C# by Jeffrey Richter
+
 Head First Design Patterns
+
 Designing Evolveable Web API'S
+

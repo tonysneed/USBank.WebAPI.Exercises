@@ -1,5 +1,13 @@
 Helpful Links:
 
+My WintellectNOW Videos:
+- Promo Code: SNEED-14
+- Or Amit will send another
+https://www.wintellectnow.com/Home/Instructor?instructorId=TonySneed
+
+Dev Essentials - FREE:
+WintellectNOW and Pluralsight subscriptions
+
 Simple Injector:
 http://simpleinjector.readthedocs.org/en/latest/index.html
 
@@ -8,4 +16,7 @@ http://blog.tonysneed.com/2013/03/22/async-services-asp-net-web-api-entity-frame
 
 WCF Is Dead:
 http://blog.tonysneed.com/2016/01/06/wcf-is-dead-long-live-mvc-6/
+
+Trackable Entities:
+http://trackableentities.github.io/
 

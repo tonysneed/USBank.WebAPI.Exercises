@@ -1,0 +1,12 @@
+Unit Testing Tools:
+
+Unit Testing: xUnit.net - NuGet Package
+
+Test Runners:
+Visual Studio Test Explorer
+ReSharper Test Runner
+
+BDD: SpecFlow - Visual Studio Extension
+  + Selenium: Automate user actions in multiple browsers
+  
+  
