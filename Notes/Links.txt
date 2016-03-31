@@ -1,0 +1,11 @@
+Helpful Links:
+
+Simple Injector:
+http://simpleinjector.readthedocs.org/en/latest/index.html
+
+Async Web API with EF 6:
+http://blog.tonysneed.com/2013/03/22/async-services-asp-net-web-api-entity-framework-6/
+
+WCF Is Dead:
+http://blog.tonysneed.com/2016/01/06/wcf-is-dead-long-live-mvc-6/
+

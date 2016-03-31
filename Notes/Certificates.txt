@@ -1,0 +1,19 @@
+Certificate Usage:
+
+1. SSL Certificate for your Web API
+   - Secures client to Web API transport
+   - Protect access token:
+     privacy (encryption)
+     integrity, replay (signing)
+   
+2. STS Signing Certificate
+   - Web API needs to validate tokens against
+     STS signing cert's public key
+     
+3. Optional: Client Certificates
+   - Instead of passing username / password 
+     to the STS for credentials, pass the
+     client certificate (thumbprint)
+     > STS checks client certificate to see if
+       it is in its data store
+       

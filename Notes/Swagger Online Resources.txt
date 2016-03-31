@@ -1,0 +1,7 @@
+Swagger Online Resources
+
+Getting Started: http://swagger.io/getting-started/
+Swagger Tools: http://swagger.io/tools/
+Tutorial 1: http://bitoftech.net/2014/08/25/asp-net-web-api-documentation-using-swagger/
+Tutorial 2: https://cmatskas.com/webapi-documentation-done-right-with-swagger/
+
