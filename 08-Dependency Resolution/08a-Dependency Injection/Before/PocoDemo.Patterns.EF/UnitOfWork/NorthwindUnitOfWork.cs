@@ -13,9 +13,10 @@ namespace PocoDemo.Patterns.EF.UnitOfWork
         private readonly ICustomersRepository _customersRepository;
         private readonly IOrdersRepository _ordersRepository;
 
-        public NorthwindUnitOfWork()
+        public NorthwindUnitOfWork(NorthwindSlim dbContext)
         {
-            _dbContext = new NorthwindSlim();
+            _dbContext = dbContext;
+            //_dbContext = new NorthwindSlim();
             _productsRepository = new ProductsRepository(_dbContext);
             _customersRepository = new CustomersRepository(_dbContext);
             _ordersRepository = new OrdersRepository(_dbContext);

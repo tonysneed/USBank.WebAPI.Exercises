@@ -14,9 +14,9 @@ namespace PocoDemo.Web.Controllers
     {
         private readonly INorthwindUnitOfWork _unitOfWork;
 
-        public OrdersController()
+        public OrdersController(INorthwindUnitOfWork unitOfWork)
         {
-            _unitOfWork = new NorthwindUnitOfWork();
+            _unitOfWork = unitOfWork; //= new NorthwindUnitOfWork();
         }
 
         // GET: api/Orders?customerId = 5

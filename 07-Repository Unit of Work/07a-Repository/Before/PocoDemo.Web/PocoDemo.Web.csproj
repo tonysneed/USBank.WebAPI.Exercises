@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -295,7 +296,9 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\WebApiTestClient.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -320,6 +323,14 @@
     <ProjectReference Include="..\PocoDemo.Entities\PocoDemo.Entities.csproj">
       <Project>{59d610be-74cd-4ab5-96a2-794fc3112af0}</Project>
       <Name>PocoDemo.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PocoDemo.Patterns.EF\PocoDemo.Patterns.EF.csproj">
+      <Project>{f58f232f-a980-4815-b403-13bcda4e7b7b}</Project>
+      <Name>PocoDemo.Patterns.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PocoDemo.Patterns\PocoDemo.Patterns.csproj">
+      <Project>{0b112f76-ff00-492f-8400-d5586ab1d6a1}</Project>
+      <Name>PocoDemo.Patterns</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

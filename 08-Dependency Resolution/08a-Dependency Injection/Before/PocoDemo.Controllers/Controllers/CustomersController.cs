@@ -3,25 +3,26 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using PocoDemo.Data;
-using PocoDemo.Patterns.EF.UnitOfWork;
 using PocoDemo.Patterns.UnitOfWork;
 
-namespace PocoDemo.Web.Controllers
+namespace PocoDemo.Controllers.v1.Controllers
 {
-    public class ProductsController : ApiController
+    public class CustomersController : ApiController
     {
         private readonly INorthwindUnitOfWork _unitOfWork;
 
-        public ProductsController(INorthwindUnitOfWork unitOfWork)
+        public CustomersController(INorthwindUnitOfWork unitOfWork)
         {
-            _unitOfWork = unitOfWork; //new NorthwindUnitOfWork();
+            //_unitOfWork = new NorthwindUnitOfWork();
+            _unitOfWork = unitOfWork;
         }
 
-        [ResponseType(typeof(IEnumerable<Product>))]
+        // GET api/customers
+        [ResponseType(typeof(IEnumerable<Customer>))]
         public async Task<IHttpActionResult> Get()
         {
-            var products = await _unitOfWork.ProductsRepository.GetProducts();
-            return Ok(products);
+            var customers = await _unitOfWork.CustomersRepository.GetCustomers();
+            return Ok(customers);
         }
 
         protected override void Dispose(bool disposing)
