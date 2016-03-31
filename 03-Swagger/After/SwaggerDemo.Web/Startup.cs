@@ -22,7 +22,7 @@ namespace SwaggerDemo.Web
             SwaggerConfig.Register();
 
             app.UseWebApi(config);
-            app.UseWelcomePage();
+            //app.UseWelcomePage();
         }
     }
 }

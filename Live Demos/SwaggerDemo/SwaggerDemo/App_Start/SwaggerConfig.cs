@@ -1,12 +1,11 @@
-using System;
 using System.Web.Http;
 using WebActivatorEx;
-using SwaggerDemo.Web;
+using SwaggerDemo;
 using Swashbuckle.Application;
 
-//[assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
+[assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
-namespace SwaggerDemo.Web
+namespace SwaggerDemo
 {
     public class SwaggerConfig
     {
@@ -21,7 +20,7 @@ namespace SwaggerDemo.Web
                         // However, there may be situations (e.g. proxy and load-balanced environments) where this does not
                         // resolve correctly. You can workaround this by providing your own code to determine the root URL.
                         //
-                        c.RootUrl(req => "http://localhost:24689/swagger");
+                        //c.RootUrl(req => GetRootUrlFromAppConfig());
 
                         // If schemes are not explicitly provided in a Swagger 2.0 document, then the scheme used to access
                         // the docs is taken as the default. If your API supports multiple schemes and you want to be explicit
@@ -33,7 +32,7 @@ namespace SwaggerDemo.Web
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("v1", "SwaggerDemo.Web");
+                        c.SingleApiVersion("v1", "SwaggerDemo");
 
                         // If your API has multiple versions, use "MultipleApiVersions" instead of "SingleApiVersion".
                         // In this case, you must provide a lambda that tells Swashbuckle which actions should be
@@ -97,7 +96,7 @@ namespace SwaggerDemo.Web
                         // those comments into the generated docs and UI. You can enable this by providing the path to one or
                         // more Xml comment files.
                         //
-                        c.IncludeXmlComments(GetXmlCommentsPath());
+                        //c.IncludeXmlComments(GetXmlCommentsPath());
 
                         // Swashbuckle makes a best attempt at generating Swagger compliant JSON schemas for the various types
                         // exposed in your API. However, there may be occasions when more control of the output is needed.
@@ -225,11 +224,6 @@ namespace SwaggerDemo.Web
                         //
                         //c.EnableOAuth2Support("test-client-id", "test-realm", "Swagger UI");
                     });
-        }
-
-        private static string GetXmlCommentsPath()
-        {
-            return $@"{AppDomain.CurrentDomain.BaseDirectory}\bin\SwaggerDemo.Web.xml";
         }
     }
 }
